@@ -1,0 +1,32 @@
+<div class="connexion-annonceur">
+  <div class="page-header">
+  	<h1 class="center bold">Connexion</h1>
+  </div>
+
+  <div class="form">
+    <%= form_for(@annonceur) do |f| %>
+
+
+      <form class="form-horizontal">
+        <div class="form-group">
+          <label class="col-sm-4 control-label"><%= f.label :email %></label>
+          <div class="col-sm-8">
+            <%= f.text_field :email , class: 'form-control', placeholder: 'Email'%>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-sm-4 control-label"><%= f.label :password %></label>
+          <div class="col-sm-8">
+            <%= f.text_field :password , class: 'form-control', placeholder: 'Mot de passe'%>
+          </div>
+        </div>
+
+        <%= f.submit "Connexion"%>
+
+      </form>
+
+    <% end %>
+  </div>
+
+</div>
