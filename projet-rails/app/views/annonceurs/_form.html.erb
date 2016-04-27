@@ -11,43 +11,72 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :nom %><br>
-    <%= f.text_field :nom %>
-  </div>
-  <div class="field">
-    <%= f.label :prenom %><br>
-    <%= f.text_field :prenom %>
-  </div>
-  <div class="field">
-    <%= f.label :password %><br>
-    <%= f.text_field :password %>
-  </div>
-  <div class="field">
-    <%= f.label :cp %><br>
-    <%= f.text_field :cp %>
-  </div>
-  <div class="field">
-    <%= f.label :adresse %><br>
-    <%= f.text_field :adresse %>
-  </div>
-  <div class="field">
-    <%= f.label :telephone %><br>
-    <%= f.text_field :telephone %>
-  </div>
-  <div class="field">
-    <%= f.label :situation %><br>
-    <%= f.text_field :situation %>
-  </div>
-  <div class="field">
-    <%= f.label :rayonIntervention %><br>
-    <%= f.text_field :rayonIntervention %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label class="col-sm-2 control-label"><%= f.label :nom %></label>
+      <div class="col-sm-10">
+        <%= f.text_field :nom , class: 'form-control', placeholder: 'Nom'%>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-sm-2 control-label"><%= f.label :prenom %></label>
+      <div class="col-sm-10">
+        <%= f.text_field :prenom , class: 'form-control', placeholder: 'Prenom'%>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-sm-2 control-label"><%= f.label :email %></label>
+      <div class="col-sm-10">
+        <%= f.text_field :email , class: 'form-control', placeholder: 'Email'%>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-sm-2 control-label"><%= f.label :password %></label>
+      <div class="col-sm-10">
+        <%= f.text_field :password , class: 'form-control', placeholder: 'Mot de passe'%>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-sm-2 control-label"><%= f.label :cp %></label>
+      <div class="col-sm-10">
+        <%= f.text_field :cp , class: 'form-control', placeholder: 'Code postal'%>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-sm-2 control-label"><%= f.label :adresse %></label>
+      <div class="col-sm-10">
+        <%= f.text_field :adresse , class: 'form-control', placeholder: 'Adresse'%>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-sm-2 control-label"><%= f.label :telephone %></label>
+      <div class="col-sm-10">
+        <%= f.text_field :telephone , class: 'form-control', placeholder: 'Téléphone'%>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-sm-2 control-label"><%= f.label :situation %></label>
+      <div class="col-sm-10">
+        <%= f.text_field :situation , class: 'form-control', placeholder: 'Situation'%>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-sm-2 control-label"><%= f.label :rayonIntervention %></label>
+      <div class="col-sm-10">
+        <%= f.text_field :rayonIntervention , class: 'form-control', placeholder: 'Rayon d\'intervention'%>
+      </div>
+    </div>
+
+    <%= link_to f.submit, class: 'btn btn-success pull-right' %>
+
+  </form>
+  
 <% end %>

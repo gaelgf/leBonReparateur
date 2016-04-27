@@ -1,49 +1,26 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @annonceur.email %>
-</p>
+<%= link_to annonceurs_path do %>
+  &#8592; Revenir à la liste des réparateurs
+<% end %>
 
-<p>
-  <strong>Nom:</strong>
-  <%= @annonceur.nom %>
-</p>
+<div class="page-header">
+  <h1>Réparateur <small><%= @annonceur.prenom %> <%= @annonceur.nom %></small></h1>
+</div>
 
-<p>
-  <strong>Prenom:</strong>
-  <%= @annonceur.prenom %>
-</p>
+<div class="row show-profile">
+  <div class="well">
+    <img src="http://lorempixel.com/200/200/people" alt="people" class="img-circle">
+    <h2><%= @annonceur.prenom %> <%= @annonceur.nom %></h2>
+    <h4><i class="glyphicon glyphicon-envelope"></i> <%= @annonceur.email %></h4>
+    <h4><i class="glyphicon glyphicon-phone"></i> <%= @annonceur.telephone %></h4>
+    <h4>
+      <i class="glyphicon glyphicon-home"></i> <%= @annonceur.adresse %>
+      <br>
+      <%= @annonceur.cp %>
+    </h4>
+    <h4><i class="glyphicon glyphicon-user"></i> <%= @annonceur.situation %></h4>
+    <h4><i class="glyphicon glyphicon-road"></i> <%= @annonceur.rayonIntervention %> km</h4>
+  </div>
+</div>
 
-<p>
-  <strong>Password:</strong>
-  <%= @annonceur.password %>
-</p>
-
-<p>
-  <strong>Cp:</strong>
-  <%= @annonceur.cp %>
-</p>
-
-<p>
-  <strong>Adresse:</strong>
-  <%= @annonceur.adresse %>
-</p>
-
-<p>
-  <strong>Telephone:</strong>
-  <%= @annonceur.telephone %>
-</p>
-
-<p>
-  <strong>Situation:</strong>
-  <%= @annonceur.situation %>
-</p>
-
-<p>
-  <strong>Rayonintervention:</strong>
-  <%= @annonceur.rayonIntervention %>
-</p>
-
-<%= link_to 'Edit', edit_annonceur_path(@annonceur) %> |
-<%= link_to 'Back', annonceurs_path %>
