@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :annonceurs
   resources :annonceurs
   resources :utilisateurs, :annonceur
+  resources :search
   root 'home#index'
   resources :utilisateurs, :annonceur
   # The priority is based upon order of creation: first created -> highest priority.
