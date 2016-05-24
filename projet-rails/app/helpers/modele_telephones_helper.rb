@@ -1,0 +1,2 @@
+module ModeleTelephonesHelper
+end

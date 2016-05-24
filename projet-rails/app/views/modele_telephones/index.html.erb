@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Modele Telephones</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @modele_telephones.each do |modele_telephone| %>
+      <tr>
+        <td><%= modele_telephone.nom %></td>
+        <td><%= link_to 'Show', modele_telephone %></td>
+        <td><%= link_to 'Edit', edit_modele_telephone_path(modele_telephone) %></td>
+        <td><%= link_to 'Destroy', modele_telephone, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Modele telephone', new_modele_telephone_path %>
