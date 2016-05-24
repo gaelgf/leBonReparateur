@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :pannes
+  resources :modele_telephones
   resources :annonceurs
   resources :annonceurs
   resources :annonceurs
