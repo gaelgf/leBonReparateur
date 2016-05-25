@@ -21,6 +21,7 @@
   <tbody>
     <% @annonceurs.each do |annonceur| %>
       <tr>
+        <td><%= annonceur.image.exists? ? image_tag(annonceur.image.url(:small)) : '&empty'.html_safe %></td>
         <td><%= annonceur.email %></td>
         <td><%= annonceur.nom %></td>
         <td><%= annonceur.prenom %></td>
@@ -58,10 +59,10 @@
 
 <h1>Test</h1>
 
-<div class="row">
+<div class="row" style="text-align: center">
   <% @annonceurs.each do |annonceur| %>
     <div class="well col-xs-4">
-      <img src="http://lorempixel.com/200/200/people" alt="people" class="img-circle">
+      <%= annonceur.image.exists? ? image_tag(annonceur.image.url(:med)) : '&empty'.html_safe %>
       <h2><%= annonceur.prenom %> <%= annonceur.nom %></h2>
       <h4><i class="glyphicon glyphicon-envelope"></i> <%= annonceur.email %></h4>
       <h4><i class="glyphicon glyphicon-phone"></i> <%= annonceur.telephone %></h4>

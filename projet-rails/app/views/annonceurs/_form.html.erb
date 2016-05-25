@@ -76,7 +76,14 @@
         </div>
       </div>
 
-      <%= f.submit%>
+      <div class="form-group">
+        <label class="col-sm-4 control-label"><%= f.label :image %></label>
+        <div class="col-sm-8">
+          <%= f.file_field :image , class: 'form-control' %>
+        </div>
+      </div>
+
+      <%= f.submit %>
 
     </form>
     

@@ -10,7 +10,10 @@
 
 <div class="row show-profile">
   <div class="well">
-    <img src="http://lorempixel.com/200/200/people" alt="people" class="img-circle">
+    <% if @annonceur.image.exists? %>
+      <%= image_tag @annonceur.image.url(:large) %>
+    <% end %>
+    <!-- <img src="http://lorempixel.com/200/200/people" alt="people" class="img-circle"> -->
     <h2><%= @annonceur.prenom %> <%= @annonceur.nom %></h2>
     <h4><i class="glyphicon glyphicon-envelope"></i> <%= @annonceur.email %></h4>
     <h4><i class="glyphicon glyphicon-phone"></i> <%= @annonceur.telephone %></h4>

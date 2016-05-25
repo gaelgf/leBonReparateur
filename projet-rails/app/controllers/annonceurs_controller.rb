@@ -69,6 +69,6 @@ class AnnonceursController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def annonceur_params
-      params.require(:annonceur).permit(:email, :nom, :prenom, :password, :cp, :adresse, :telephone, :situation, :rayonIntervention)
+      params.require(:annonceur).permit(:email, :nom, :prenom, :password, :cp, :adresse, :telephone, :situation, :rayonIntervention, :image)
     end
 end
