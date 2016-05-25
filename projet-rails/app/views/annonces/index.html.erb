@@ -6,12 +6,12 @@
   </form>
 </div>
 
-<div class="row">
+<div class="row" style="text-align: center">
   <h2>Voici nos annonces</h2>
 
   <% @annonceurs.each do |annonceur| %>
     <div class="well col-xs-4">
-      <a href="annonceurs/<%= annonceur.id %>" ><img src="http://lorempixel.com/200/200/people" alt="people" class="img-circle"></a>
+      <%= annonceur.image.exists? ? image_tag(annonceur.image.url(:med)) : '&empty'.html_safe %>
       <h2><%= annonceur.prenom %> <%= annonceur.nom %></h2>
       <h4><i class="glyphicon glyphicon-envelope"></i> <%= annonceur.email %></h4>
       <h4><i class="glyphicon glyphicon-phone"></i> <%= annonceur.telephone %></h4>

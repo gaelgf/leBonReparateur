@@ -56,23 +56,3 @@
 <%= link_to new_annonceur_path, class: 'btn btn-success' do %>
   <i class="glyphicon glyphicon-plus"> New Annonceur</i>
 <% end %>
-
-<h1>Test</h1>
-
-<div class="row" style="text-align: center">
-  <% @annonceurs.each do |annonceur| %>
-    <div class="well col-xs-4">
-      <%= annonceur.image.exists? ? image_tag(annonceur.image.url(:med)) : '&empty'.html_safe %>
-      <h2><%= annonceur.prenom %> <%= annonceur.nom %></h2>
-      <h4><i class="glyphicon glyphicon-envelope"></i> <%= annonceur.email %></h4>
-      <h4><i class="glyphicon glyphicon-phone"></i> <%= annonceur.telephone %></h4>
-      <h4>
-        <i class="glyphicon glyphicon-home"></i> <%= annonceur.adresse %>
-        <br>
-        <%= annonceur.cp %>
-      </h4>
-      <h4><i class="glyphicon glyphicon-user"></i> <%= annonceur.situation %></h4>
-      <h4><i class="glyphicon glyphicon-road"></i> <%= annonceur.rayonIntervention %> km</h4>
-    </div>
-  <% end %>
-</div>
