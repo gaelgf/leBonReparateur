@@ -1,0 +1,37 @@
+<%= form_for(@reparation) do |f| %>
+  <% if @reparation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@reparation.errors.count, "error") %> prohibited this reparation from being saved:</h2>
+
+      <ul>
+      <% @reparation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <span>Annonce :</span>
+    <textaera></textaera>
+  </div>
+  <div class="field">
+    <span>reparation :</span>
+    <label>Ecran</label>
+    <input type="radio">
+    <label>Batterie</label>
+    <input type="radio">
+    <label>Bouton power</label>
+    <input type="radio">
+    <label>Haut parleur</label>
+    <input type="radio">
+    <button>Add</button>
+  </div>
+  <div class="field">
+    <span>Prix :</span>
+    <input>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
