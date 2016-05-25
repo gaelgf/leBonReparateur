@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
-
+<%= link_to 'Se déconnecter', destroy_user_session_path, method: :delete %>
+<%= link_to 'Se connecter', new_user_session_path%>
 <h1>Listing Annonceurs</h1>
 
 <table class="table table-responsive">
