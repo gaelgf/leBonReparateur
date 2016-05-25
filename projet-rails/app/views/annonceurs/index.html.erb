@@ -23,10 +23,10 @@
     <% @annonceurs.each do |annonceur| %>
       <tr>
         <td><%= annonceur.image.exists? ? image_tag(annonceur.image.url(:small)) : '&empty'.html_safe %></td>
-        <td><%= annonceur.email %></td>
+        <!-- <td><%#= annonceur.email %></td> -->
         <td><%= annonceur.nom %></td>
         <td><%= annonceur.prenom %></td>
-        <td><%= annonceur.password %></td>
+        <!-- <td><%#= annonceur.password %></td> -->
         <td><%= annonceur.cp %></td>
         <td><%= annonceur.adresse %></td>
         <td><%= annonceur.telephone %></td>
