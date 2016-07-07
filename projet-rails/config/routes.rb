@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :reparations
   devise_for :users
+  resources :users
   resources :pannes
   resources :modele_telephones
   resources :annonceurs

@@ -1,89 +1,99 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<h2>Modifier votre compte</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+  <div class="form-group">
+    <label class="col-sm-4 control-label">Email</label>
+    <div class="col-sm-6">
+      <%= f.email_field :email, autofocus: true, class: 'form-control' %>
+    </div>
+    <br>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+  <div class="form-group">
+    <label class="col-sm-4 control-label">Nouveau mot de passe</label>
+    <div class="col-sm-6">
+      <%= f.password_field :password, autocomplete: "off", class: 'form-control', placeholder: "Nouveau mot de passe (laisser le champ vide si vous ne souhaitez pas le modifier)" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  <div class="form-group">
+    <label class="col-sm-4 control-label">Confirmation du mot de passe</label>
+    <div class="col-sm-6">
+      <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control', placeholder: "Confirmer votre nouveau mot de passe" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "off" %>
+  <div class="form-group">
+    <label class="col-sm-4 control-label">Mot de passe actuel</label>
+    <div class="col-sm-6">
+      <%= f.password_field :current_password, autocomplete: "off", class: 'form-control', placeholder: "Mot de passe actuel" %>
+    </div>
   </div>
 
   <div class="form-group">
     <label class="col-sm-4 control-label"><%= f.label :nom %></label>
-    <div class="col-sm-8">
-      <%= f.text_field :nom , class: 'form-control'%>
-
+    <div class="col-sm-6">
+      <%= f.text_field :nom , class: 'form-control', placeholder: 'Nom'%>
     </div>
   </div>
 
   <div class="form-group">
     <label class="col-sm-4 control-label"><%= f.label :prenom %></label>
-    <div class="col-sm-8">
+    <div class="col-sm-6">
       <%= f.text_field :prenom , class: 'form-control', placeholder: 'Prenom'%>
     </div>
   </div>
 
   <div class="form-group">
     <label class="col-sm-4 control-label"><%= f.label :cp %></label>
-    <div class="col-sm-8">
+    <div class="col-sm-6">
       <%= f.text_field :cp , class: 'form-control', placeholder: 'Code postal'%>
     </div>
   </div>
 
   <div class="form-group">
     <label class="col-sm-4 control-label"><%= f.label :adresse %></label>
-    <div class="col-sm-8">
+    <div class="col-sm-6">
       <%= f.text_field :adresse , class: 'form-control', placeholder: 'Adresse'%>
     </div>
   </div>
 
   <div class="form-group">
     <label class="col-sm-4 control-label"><%= f.label :telephone %></label>
-    <div class="col-sm-8">
+    <div class="col-sm-6">
       <%= f.text_field :telephone , class: 'form-control', placeholder: 'Téléphone'%>
     </div>
   </div>
 
   <div class="form-group">
     <label class="col-sm-4 control-label"><%= f.label :situation %></label>
-    <div class="col-sm-8">
+    <div class="col-sm-6">
       <%= f.text_field :situation , class: 'form-control', placeholder: 'Situation'%>
     </div>
   </div>
 
   <div class="form-group">
     <label class="col-sm-4 control-label"><%= f.label :rayonIntervention %></label>
-    <div class="col-sm-8">
+    <div class="col-sm-6">
       <%= f.text_field :rayonIntervention , class: 'form-control', placeholder: 'Rayon d\'intervention'%>
     </div>
   </div>
 
-  <div class="actions">
+  <div class="actions col-sm-4">
     <%= f.submit "Update" %>
   </div>
 <% end %>
 
-<h3>Cancel my account</h3>
+<div class="col-sm-12">
+<h3>Supprimer mon compte</h3>
 
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+<p> <%= button_to "Supprimer compte", registration_path(resource_name), data: { confirm: "Etes-vous sur ?" }, method: :delete %></p>
 
-<%= link_to "Back", :back %>
+<%= link_to "Retour", :back %>
+</div>
