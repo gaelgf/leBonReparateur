@@ -1,29 +1,30 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to annonceurs_path do %>
-  &#8592; Revenir à la liste des réparateurs
-<% end %>
-
-<div class="page-header">
-  <h1>Réparateur <small><%= @annonceur.prenom %> <%= @annonceur.nom %></small></h1>
-</div>
-
-<div class="row show-profile">
-  <div class="well">
-    <% if @annonceur.image.exists? %>
-      <%= image_tag @annonceur.image.url(:large) %>
-    <% end %>
-    <!-- <img src="http://lorempixel.com/200/200/people" alt="people" class="img-circle"> -->
-    <h2><%= @annonceur.prenom %> <%= @annonceur.nom %></h2>
-    <!-- <h4><i class="glyphicon glyphicon-envelope"></i> <%#= @annonceur.email %></h4> -->
-    <h4><i class="glyphicon glyphicon-phone"></i> <%= @annonceur.telephone %></h4>
-    <h4>
-      <i class="glyphicon glyphicon-home"></i> <%= @annonceur.adresse %>
-      <br>
-      <%= @annonceur.cp %>
-    </h4>
-    <h4><i class="glyphicon glyphicon-user"></i> <%= @annonceur.situation %></h4>
-    <h4><i class="glyphicon glyphicon-road"></i> <%= @annonceur.rayonIntervention %> km</h4>
+<div class="profil">
+  <div class="page-profil">
+    <%= image_tag("home.jpg", :alt => "home", :class => "image-profil") %>
+    <h1>Fiche de <small><%= @annonceur.prenom %> <%= @annonceur.nom %></small></h1>
   </div>
-</div>
+  <div class=" affiche-profil">
+    <div class="well">
+      <% if @annonceur.image.exists? %>
+        <%= image_tag @annonceur.image.url(:large) %>
+      <% end %>
+      <!-- <img src="http://lorempixel.com/200/200/people" alt="people" class="img-circle"> -->
+      <h2><%= @annonceur.prenom %> <%= @annonceur.nom %></h2>
+      <!-- <h4><i class="glyphicon glyphicon-envelope"></i> <%#= @annonceur.email %></h4> -->
+      <h4><i class="glyphicon glyphicon-phone"></i> <%= @annonceur.telephone %></h4>
+      <h4>
+        <i class="glyphicon glyphicon-home"></i> <%= @annonceur.adresse %>
+        <br>
+        <%= @annonceur.cp %>
+      </h4>
+      <h4><i class="glyphicon glyphicon-user"></i> <%= @annonceur.situation %></h4>
+      <h4><i class="glyphicon glyphicon-road"></i> <%= @annonceur.rayonIntervention %> km</h4>
+    </div>
+  </div>
 
+  <%= link_to annonceurs_path do %>
+    Retour
+  <% end %>
+</div>

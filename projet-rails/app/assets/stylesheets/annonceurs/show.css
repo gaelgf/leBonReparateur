@@ -9,3 +9,33 @@
 	align-items: center;
 	text-align: center;
 }
+
+.page-profil{
+	width:700px;
+	height:200px;
+	display:flex;
+	flex-direction: row;
+	margin: auto;
+}
+.page-profil h1{
+	justify-content: center;
+	margin: auto;
+}
+.image-profil{
+	width: 150px;
+	height: 150px;
+	border-radius: 150px;
+
+	margin: auto;
+}
+
+.affiche-profil{
+	position:flex;
+	margin-top:40px;
+	width:1200px;
+}
+
+.profil{
+	display:flex;
+	flex-direction: column;
+}
