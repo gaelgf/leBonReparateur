@@ -11,6 +11,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :telephone
       t.string :situation
       t.string :rayonIntervention
+      t.string :description
 
       ## Recoverable
       t.string   :reset_password_token

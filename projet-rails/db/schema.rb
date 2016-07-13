@@ -59,6 +59,7 @@ ActiveRecord::Schema.define(version: 20160525194507) do
     t.string   "telephone"
     t.string   "situation"
     t.string   "rayonIntervention"
+    t.string   "description"
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
