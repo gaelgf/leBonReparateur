@@ -100,3 +100,32 @@ a:link{
 .nav{
 
 }
+
+/* NEXT */
+.listeAnnonces{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.annonce{
+  border: 1px solid black;
+  width:250px;
+  height: 300px;
+  border-radius: 5px;
+  margin: 30px;
+}
+
+.annonce img{
+  width: 250px;
+  height: 250px;
+}
+.annonce div{
+  height:50px;
+  width:250px;
+  border-top: 1px solid black;
+}
+.annonce div p{
+  line-height: 50px;
+  font-size: 18px;
+  text-align: center;
+}
