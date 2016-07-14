@@ -17,7 +17,7 @@
         <ul>
           <li><a href="/users">Nos annonces</a></li>
           <% if user_signed_in? %>
-          <li><a href="">Déposer votre annonce</a></li>
+          <li><a href="/users/edit">Déposer votre annonce</a></li>
           <% else %>
           <li><a href="/users/edit">Déposer votre annonce</a></li>
           <% end %>
@@ -27,7 +27,7 @@
       			<li><a href=""><%= link_to 'Se déconnecter', destroy_user_session_path, method: :delete %></a></li>
       		<% else %>
       			<li><a href=""><%= link_to 'Se connecter', new_user_session_path%></a></li>
-            <li><a href="">S'inscrire</a></li>
+            <li><a href="/users/sign_up">S'inscrire</a></li>
       		<% end %>
 
 

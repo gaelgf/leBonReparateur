@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<div class="profil">
+  <div class="page-profil">
+    <%= image_tag(@user.avatar.url(:medium)) %>
+    <h1>Fiche de <small><%= @user.prenom %> <%= @user.nom %></small></h1>
+  </div>
+  <div class=" affiche-profil">
+    <div class="well">
+
+      <!-- <img src="http://lorempixel.com/200/200/people" alt="people" class="img-circle"> -->
+      <h2><%= @user.prenom %> <%= @user.nom %></h2>
+      <h4><%= @user.description %></h4>
+      <!-- <h4><i class="glyphicon glyphicon-envelope"></i> <%#= @annonceur.email %></h4> -->
+      <h4><i class="glyphicon glyphicon-phone"></i> <%= @user.telephone %></h4>
+      <h4>
+        <i class="glyphicon glyphicon-home"></i> <%= @user.adresse %>
+        <br>
+        <%= @user.cp %>
+      </h4>
+      <h4><i class="glyphicon glyphicon-user"></i> <%= @user.situation %></h4>
+      <h4><i class="glyphicon glyphicon-road"></i> <%= @user.rayonIntervention %> km</h4>
+    </div>
+  </div>
+
+  <a href="/users">Retour</a>
+</div>
