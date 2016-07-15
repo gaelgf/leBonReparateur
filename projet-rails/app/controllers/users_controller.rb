@@ -1,11 +1,11 @@
 class UsersController < ApplicationController
   def index
-    @users = User.all
+    @users = User.paginate(page: params[:page], per_page:10)
     if params[:users]
    		@search_value = search_params[:search]
    		@users = @users.search(@search_value)
    	end
-    
+
   end
   def show
     @user = User.find(params[:id])

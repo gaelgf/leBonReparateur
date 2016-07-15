@@ -41,3 +41,6 @@
     </div>
   <% end %>
 </div>
+<div class="pagination-annonce">
+  <%= will_paginate @users, renderer: BootstrapPagination::Rails %>
+</div>

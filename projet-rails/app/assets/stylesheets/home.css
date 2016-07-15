@@ -177,3 +177,7 @@ a:link{
 .image-profil-edit img{
   width: 35px;
 }
+.pagination-annonce{
+  display:flex;
+  justify-content: center;
+}
