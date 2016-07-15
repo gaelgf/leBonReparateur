@@ -37,6 +37,13 @@ body{
   color: white;
 }
 
+.items-nav form{
+  line-height: 75px;
+}
+#users_search{
+  width: 245px;
+}
+
 .image-home{
   position: fixed;
   margin-top: -50px;

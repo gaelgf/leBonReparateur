@@ -10,6 +10,6 @@ class User < ActiveRecord::Base
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
 
   search_scope :search do
-		attributes :cp
+		attributes :cp, :adresse
 	end
 end
