@@ -2,14 +2,24 @@
 <div class="content">
 
   <div class="home">
-    <h1 class="h1-home">Réparation de smartphones</h1>
+    <h1 class="h1-home">L'application de réparation de smarthpones</h1>
     <div class="menu-home">
       <div class="item-home">
-        <a href="/annonceur">Passer mon annonce</a>
+        <%= image_tag("carte.jpg", :alt => "home") %>
       </div>
       <div class="item-home">
-        <a href="/annonces">Voir les annonces</a>
+        <h2>Un problème avec votre smartphone ?</h2>
+        <p>Venez recherchez des annonces dans votre région, un particulier ou un professionnel
+        sera peut-être disponible pour vous dépanner. Accéder à sa fiche produit pour en savoir plus
+        sur cette personne et accèder aux différentes réparations qu'il propose.</p>
+        <a href="/users">Voir les annonces</a>
+        <h2>Vous êtes réparateur de smarthpones ?</h2>
+        <p>Particulier ou professionnel, il vous siffut de vous inscrire, et de compléter votre profil,
+        les personnes interessées vous contacterons directement par mail ou téléphone.</p>
+        <a href="/users/sign_in">Connectez-vous     -</a>
+        <a href="/users/sign_up">Inscrivez-vous</a>
       </div>
     </div>
+
   </div>
 </div>

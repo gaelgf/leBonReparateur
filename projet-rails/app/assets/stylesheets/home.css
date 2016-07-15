@@ -84,16 +84,8 @@ body{
 }
 
 .item-home{
-  width: 250px;
-  height: 250px;
-  border: 1px solid black;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 500px;
+
 }
 .item-home a{
   color: black;
