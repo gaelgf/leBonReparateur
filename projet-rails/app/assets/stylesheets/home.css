@@ -152,10 +152,11 @@ a:link{
   height:150px;
   border-right: 1px solid black;
   border-radius: 75px;
-
 }
 .annonce2 a img{
   width: 150px;
+  height: 150px;
+  border-radius: 75px;
 }
 .text-annonce{
   display:flex;

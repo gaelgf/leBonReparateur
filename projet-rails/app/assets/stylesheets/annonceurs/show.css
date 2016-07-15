@@ -36,8 +36,8 @@
 }
 
 .image-profil{
-	width: 500px;
-	height: 500px;
+	width: 503px;
+	height: 503px;
 	border: 1px solid black;
 	border-radius: 5px;
 }
@@ -47,9 +47,31 @@
 	border-radius: 5px;
 }
 
+/*TEST */
+.bloc-info{
+	width:250px;
+	height: 50px;
+	border-radius: 25px;
+	border: 1px solid black;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.bloc-info p{
+	margin-left: 10px;
+	line-height:50px;
+	font-size:15px;
+}
+.bloc-info p i{
+	font-size: 15px;
+	margin-right:10px;
+}
+
+/*Fin test */
+
 .profil-description{
 	width:1000px;
 	margin: auto;
+	text-align: justify;
 }
 
 .profil a{
