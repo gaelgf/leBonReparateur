@@ -1,11 +1,11 @@
-<h2>Modifier votre compte</h2>
+<h2 class="center separator-blank">Modifier votre compte</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
 
   <div class="form-group">
     <label class="col-sm-4 control-label">Email</label>
-    <div class="col-sm-6">
+    <div class="col-sm-8">
       <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: "Email" %>
     </div>
     <br>
@@ -17,70 +17,63 @@
 
   <div class="form-group">
     <label class="col-sm-4 control-label">Nouveau mot de passe</label>
-    <div class="col-sm-6">
+    <div class="col-sm-8">
       <%= f.password_field :password, autocomplete: "off", class: 'form-control', placeholder: "Nouveau mot de passe (laisser le champ vide si vous ne souhaitez pas le modifier)" %>
     </div>
   </div>
 
   <div class="form-group">
     <label class="col-sm-4 control-label">Confirmation du mot de passe</label>
-    <div class="col-sm-6">
+    <div class="col-sm-8">
       <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control', placeholder: "Confirmer votre nouveau mot de passe" %>
     </div>
   </div>
 
   <div class="form-group">
-    <label class="col-sm-4 control-label">Mot de passe actuel</label>
-    <div class="col-sm-6">
-      <%= f.password_field :current_password, autocomplete: "off", class: 'form-control', placeholder: "Mot de passe actuel" %>
-    </div>
-  </div>
-
-  <div class="form-group">
     <label class="col-sm-4 control-label"><%= f.label :nom %></label>
-    <div class="col-sm-6">
+    <div class="col-sm-8">
       <%= f.text_field :nom , class: 'form-control', placeholder: 'Nom'%>
     </div>
   </div>
 
   <div class="form-group">
     <label class="col-sm-4 control-label"><%= f.label :prenom %></label>
-    <div class="col-sm-6">
+    <div class="col-sm-8">
       <%= f.text_field :prenom , class: 'form-control', placeholder: 'Prenom'%>
     </div>
   </div>
 
   <div class="form-group">
-    <label class="col-sm-4 control-label"><%= f.label :cp %></label>
-    <div class="col-sm-6">
+    <label class="col-sm-4 control-label">Code postal</label>
+    <div class="col-sm-8">
       <%= f.text_field :cp , class: 'form-control', placeholder: 'Code postal'%>
     </div>
   </div>
 
   <div class="form-group">
-    <label class="col-sm-4 control-label"><%= f.label :adresse %></label>
-    <div class="col-sm-6">
-      <%= f.text_field :adresse , class: 'form-control', placeholder: 'Adresse'%>
+    <label class="col-sm-4 control-label">Ville</label>
+    <div class="col-sm-8">
+      <%= f.text_field :adresse , class: 'form-control', placeholder: 'Ville'%>
     </div>
   </div>
 
   <div class="form-group">
     <label class="col-sm-4 control-label"><%= f.label :telephone %></label>
-    <div class="col-sm-6">
+    <div class="col-sm-8">
       <%= f.text_field :telephone , class: 'form-control', placeholder: 'Téléphone'%>
     </div>
   </div>
 
   <div class="form-group">
     <label class="col-sm-4 control-label"><%= f.label :situation %></label>
-    <div class="col-sm-6">
-      <%= f.text_field :situation , class: 'form-control', placeholder: 'Situation'%>
+    <div class="col-sm-8">
+      <%= f.text_field :situation , class: 'form-control', placeholder: 'Professionnel ou particulier'%>
     </div>
   </div>
 
   <div class="form-group">
-    <label class="col-sm-4 control-label"><%= f.label :rayonIntervention %></label>
-    <div class="col-sm-6">
+    <label class="col-sm-4 control-label">Rayon d'intervention</label>
+    <div class="col-sm-8">
       <%= f.text_field :rayonIntervention , class: 'form-control', placeholder: 'Rayon d\'intervention'%>
     </div>
   </div>
@@ -88,7 +81,7 @@
   <div class="form-group">
     <label class="col-sm-4 control-label"><%= f.label :description %></label>
     <div class="col-sm-8">
-      <%= f.text_field :description , class: 'form-control', placeholder: 'Description'%>
+      <%= f.text_area :description , class: 'form-control', placeholder: 'Description'%>
     </div>
   </div>
 
@@ -97,18 +90,20 @@
         <div class="col-sm-6">
             <%= f.file_field :avatar %>
         </div>
-        <li class="round-image-50"><%= image_tag(current_user.avatar.url(:thumb)) %></li>
+        <div class="image-profil-edit">
+          Image actuel
+          <%= image_tag(current_user.avatar.url(:thumb)) %>
+        </div>
     </div>
 
-  <div class="actions col-sm-4">
-    <%= f.submit "Update" %>
+    <div class="form-group">
+      <label class="col-sm-4 control-label">Saisir votre mot de passe pour valider</label>
+      <div class="col-sm-8">
+        <%= f.password_field :current_password, autocomplete: "off", class: 'form-control', placeholder: "Mot de passe" %>
+      </div>
+    </div>
+
+  <div class="actions separator-blank">
+    <button class="button-edit" type="submit">Modifier votre compte</button>
   </div>
 <% end %>
-
-<div class="col-sm-12">
-<h3>Supprimer mon compte</h3>
-
-<p> <%= button_to "Supprimer compte", registration_path(resource_name), data: { confirm: "Etes-vous sur ?" }, method: :delete %></p>
-
-<%= link_to "Retour", :back %>
-</div>

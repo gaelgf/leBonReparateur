@@ -144,6 +144,15 @@ a:link{
   height: 30px;
   margin-top: 20px;
 }
+.button-edit{
+  background-color: black;
+  color: white;
+  border: 0px;
+  border-radius: 5px;
+  width: 150px;
+  height: 30px;
+  margin-top: 20px;
+}
 
 .actions{
   width:300px;
@@ -164,4 +173,7 @@ a:link{
 }
 .separator-blank{
   margin-bottom: 20px;
+}
+.image-profil-edit img{
+  width: 35px;
 }
