@@ -129,3 +129,39 @@ a:link{
   font-size: 18px;
   text-align: center;
 }
+
+/* NEXT */
+.center{
+  text-align:center;
+}
+
+.button-sign-up{
+  background-color: black;
+  color: white;
+  border: 0px;
+  border-radius: 5px;
+  width: 100px;
+  height: 30px;
+  margin-top: 20px;
+}
+
+.actions{
+  width:300px;
+  height:50px;
+  margin: auto;
+}
+.actions button{
+  float:left;
+
+}
+.actions a{
+  float:right;
+  margin-top:25px;
+}
+
+.container .form-group{
+  height: 30px;
+}
+.separator-blank{
+  margin-bottom: 20px;
+}
