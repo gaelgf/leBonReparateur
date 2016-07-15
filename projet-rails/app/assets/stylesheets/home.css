@@ -15,7 +15,7 @@ body{
   flex-direction: row;
   justify-content: space-between;
   margin: auto;
-  width: 1000px;
+  width: 1200px;
 }
 .items-nav h2 a{
   color: white;

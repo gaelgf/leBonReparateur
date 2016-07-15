@@ -1,14 +1,16 @@
 Rails.application.routes.draw do
   resources :reparations
   devise_for :users, :controllers => { registrations: 'registrations' }
-  resources :users
+  resources :users do
+    get "search"
+  end
   resources :pannes
   resources :modele_telephones
   resources :annonceurs
   resources :annonceurs
   resources :annonceurs
   resources :utilisateurs, :annonceur
-  resources :search
+  resources :search, :controllers => {search: 'search'}
   root 'home#index'
   resources :utilisateurs, :annonceur, :annonces
   # The priority is based upon order of creation: first created -> highest priority.

@@ -29,9 +29,17 @@
       			<li><a href=""><%= link_to 'Se connecter', new_user_session_path%></a></li>
             <li><a href="/users/sign_up">S'inscrire</a></li>
       		<% end %>
-
-
         </ul>
+
+        <%= simple_form_for :users, url: users_path,
+        								method: :get,
+        								html: {class: 'form-inline text-right'} do |f| %>
+        	<div class="form-group">
+        		<div class="input-group">
+        			<%= f.input_field :search, label: false, placeholder: 'Rechercher', class:'form-control', value: @search_value %>
+        		</div>
+        	</div>
+        <% end %>
 
       </div>
     </div>
