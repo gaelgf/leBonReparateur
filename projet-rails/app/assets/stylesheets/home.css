@@ -130,6 +130,53 @@ a:link{
   text-align: center;
 }
 
+.listeAnnonces2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.annonce2{
+  margin-left:auto;
+  margin-right: auto;
+  width:1000px;
+  height:150px;
+  border: 1px solid black;
+  margin-top:15px;
+  margin-bottom: 15px;
+  border-radius:75px;
+  display: flex;
+}
+.img-annonce{
+  width:150px;
+  height:150px;
+  border-right: 1px solid black;
+  border-radius: 75px;
+
+}
+.annonce2 a img{
+  width: 150px;
+}
+.text-annonce{
+  display:flex;
+  flex-direction: column;
+}
+.annonce-name-user{
+  margin-left: 20px;
+  margin-top:10px;
+  width: 750px;
+  display:flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+.annonce-description{
+  margin-left: 20px;
+  width: 750px;
+  display:flex;
+  flex-direction: column;
+  text-align: justify;
+}
+
 /* NEXT */
 .center{
   text-align:center;

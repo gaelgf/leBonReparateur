@@ -1,43 +1,18 @@
+<h2 class="center separator-blank">Nos annonces</h2>
 
-<h1>Listing Users</h1>
-<table>
-  <thead>
-    <tr>
-      <th>email</th>
-      <th>Nom</th>
-      <th>Prenom</th>
-      <th>cp</th>
-      <th>tephone</th>
-      <th>situation</th>
-      <th>rayon d'intervention</th>
-      <th>cp</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= user.email %></td>
-        <td><%= user.nom %></td>
-        <td><%= user.prenom %></td>
-        <td><%= user.cp %></td>
-        <td><%= user.adresse %></td>
-        <td><%= user.telephone %></td>
-        <td><%= user.situation %></td>
-        <td><%= user.rayonIntervention %></td>
-        <td><%= image_tag(user.avatar.url(:thumb)) %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<h2>Annonceurs</h2>
-<div class="listeAnnonces">
-
+<div class="listeAnnonces2">
   <% @users.each do |user| %>
-    <div class="annonce">
-      <a href="/users/<%= user.id %>"><%= image_tag(user.avatar.url(:medium)) %></a>
-      <div><p><%= user.nom %> <%= user.prenom %></p></div>
+    <div class="annonce2">
+      <div class="img-annonce"><a href="/users/<%= user.id %>"><%= image_tag(user.avatar.url(:medium)) %></a></div>
+      <div class="text-annonce">
+        <div class="annonce-name-user">
+          <div><p><%= user.nom %> <%= user.prenom %></p></div>
+          <div><p><%= user.adresse %> <%= user.cp %></p></div>
+        </div>
+        <div class="annonce-description">
+          <p><%= user.description %></p>
+        </div>
+      </div>
     </div>
   <% end %>
 </div>
