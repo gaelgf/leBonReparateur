@@ -21,21 +21,49 @@
 	justify-content: center;
 	margin: auto;
 }
-.image-profil{
-	width: 150px;
-	height: 150px;
-	border-radius: 150px;
-
-	margin: auto;
-}
 
 .affiche-profil{
-	position:flex;
-	margin-top:40px;
-	width:1200px;
+	display:flex;
+	width:1000px;
+	justify-content: space-between;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .profil{
 	display:flex;
 	flex-direction: column;
+}
+
+.image-profil{
+	width: 500px;
+	height: 500px;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+.image-profil img{
+	width: 500px;
+	height: 500px;
+	border-radius: 5px;
+}
+
+.profil-description{
+	width:1000px;
+	margin: auto;
+}
+
+.profil a{
+	margin: auto;
+	font-size: 20px;
+	color: white;
+	margin-bottom: 30px;
+	text-align: center;
+	width:100px;
+	height:30px;
+	border: 1px solid black;
+	border-radius: 10px;
+	background-color: black;
+}
+h4 span{
+	margin-left: 25px;
 }
